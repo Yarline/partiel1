@@ -1,0 +1,109 @@
+@import "reset";
+@import "variables";
+
+body{
+    position: relative;
+    width: 1024px;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-image: url(../img/797972.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: sepia(70%) hue-rotate(100deg) saturate(60%);
+    height: 60vh;
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        
+    
+        div{
+            display: flex;
+            padding: 10px 50px;
+    
+            a{
+                color:$titreClair;
+                margin: 10px;
+            }
+        }
+    }
+    
+
+    p{
+        position: absolute;
+        bottom: 20px;
+        left: 30px;
+        font-size: 100px;
+        opacity: 0.3;
+        color: $titreClair;
+    }
+}
+
+.calendar{
+    display: flex;
+    flex-wrap: wrap;
+
+    div{
+        width: 25%;
+        background-color: $backgroundDark;
+        height: 200px;
+        padding: 20px;
+        border: solid 1px $textBlue;
+
+        h2{
+            color: $titreClair;
+            text-transform: uppercase;
+            font-size:2em;
+            margin-bottom: 30px;
+            
+        text-align:center;
+        }
+        p, small{
+            color: $textBlue;
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        small i{
+            margin-right: 10px;
+        }
+
+    }
+}
+
+.popUp{
+    background-color: $backgroundDark;
+    color:$titreClair;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    border-radius: 5px;
+    width: 70%;
+    padding: 30px 15px;
+
+    .close{
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
+    
+
+    div{
+        width: 50%;
+    }
+
+    figure{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .calendar div{
+        width: 100%;
+    }
+}
